@@ -113,7 +113,7 @@ public class MenuEliminacion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pilotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pilotoActionPerformed
-        BusquedaPiloto bp = new BusquedaPiloto();
+        EliminacionPiloto bp = new EliminacionPiloto();
         bp.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_pilotoActionPerformed
@@ -125,7 +125,7 @@ public class MenuEliminacion extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void equipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipoActionPerformed
-        BusquedaEquipo be = new BusquedaEquipo();
+        EliminacionEquipo be = new EliminacionEquipo();
         be.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_equipoActionPerformed
