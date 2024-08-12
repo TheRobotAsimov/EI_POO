@@ -55,6 +55,11 @@ public class Menu extends javax.swing.JFrame {
         });
 
         eliminar.setText("Eliminar");
+        eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarActionPerformed(evt);
+            }
+        });
 
         editar.setText("Editar");
 
@@ -142,7 +147,9 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarActionPerformed
-        // TODO add your handling code here:
+        MenuBusqueda menub = new MenuBusqueda();
+        menub.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_buscarActionPerformed
 
     private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
@@ -150,6 +157,12 @@ public class Menu extends javax.swing.JFrame {
         menur.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_registrarActionPerformed
+
+    private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
+        MenuEliminacion menue = new MenuEliminacion();
+        menue.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_eliminarActionPerformed
 
     
     
