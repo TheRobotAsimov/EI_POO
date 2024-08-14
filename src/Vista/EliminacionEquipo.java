@@ -170,8 +170,8 @@ public class EliminacionEquipo extends javax.swing.JFrame {
     }//GEN-LAST:event_mpActionPerformed
 
     private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
-        MenuBusqueda  menub = new MenuBusqueda();
-        menub.setVisible(true);
+        MenuEliminacion  menue = new MenuEliminacion();
+        menue.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_regresarActionPerformed
 

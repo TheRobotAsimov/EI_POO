@@ -1,29 +1,27 @@
 
 package Vista;
 
+import Controlador.ActualizarRegistroEquipo;
+import Controlador.ActualizarRegistroPiloto;
 import Controlador.BuscarTodoEquipo;
 import Controlador.BuscarTodoPiloto;
-import Controlador.BuscarTodoVehiculo;
-import Controlador.EliminarRegistroVehiculo;
 import Controlador.MostrarDatosEquipo;
 import Controlador.MostrarDatosPiloto;
-import Controlador.MostrarDatosVehiculo;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author kevin
  */
-public class EliminacionVehiculo extends javax.swing.JFrame {
+public class EditarEquipo extends javax.swing.JFrame {
 
     /**
      * Creates new form BusquedaPiloto
      */
-    public EliminacionVehiculo() {
+    public EditarEquipo() {
         initComponents();
     }
 
@@ -41,11 +39,11 @@ public class EliminacionVehiculo extends javax.swing.JFrame {
         regresar = new javax.swing.JButton();
         mp = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        vehiculo = new javax.swing.JTable();
+        equipo = new javax.swing.JTable();
         metodoBusqueda = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         parametro = new javax.swing.JTextField();
-        eliminar = new javax.swing.JButton();
+        actualizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,35 +70,35 @@ public class EliminacionVehiculo extends javax.swing.JFrame {
             }
         });
 
-        vehiculo.setModel(new javax.swing.table.DefaultTableModel(
+        equipo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID", "Modelo", "Número", "Peso", "Velocidad máxima", "Color", "ID equipo", "ID piloto"
+                "ID", "Marca", "Director", "Nacionalidad", "Cantidad neumáticos"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, true, true, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(vehiculo);
+        jScrollPane1.setViewportView(equipo);
 
         metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Mostrar todos", " " }));
 
         jLabel1.setText("Método de búsqueda:");
 
-        eliminar.setText("Eliminar");
-        eliminar.addActionListener(new java.awt.event.ActionListener() {
+        actualizar.setText("Actualizar");
+        actualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarActionPerformed(evt);
+                actualizarActionPerformed(evt);
             }
         });
 
@@ -110,8 +108,17 @@ public class EliminacionVehiculo extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 916, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(regresar)
+                        .addGap(90, 90, 90)
+                        .addComponent(actualizar)
+                        .addGap(97, 97, 97)
+                        .addComponent(mp)
+                        .addGap(248, 248, 248))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 916, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(110, 110, 110)
                 .addComponent(jLabel1)
@@ -122,14 +129,6 @@ public class EliminacionVehiculo extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(mostrar)
                 .addGap(141, 141, 141))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(278, 278, 278)
-                .addComponent(regresar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(eliminar)
-                .addGap(101, 101, 101)
-                .addComponent(mp)
-                .addGap(248, 248, 248))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,7 +145,7 @@ public class EliminacionVehiculo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(regresar)
                     .addComponent(mp)
-                    .addComponent(eliminar))
+                    .addComponent(actualizar))
                 .addGap(25, 25, 25))
         );
 
@@ -173,57 +172,57 @@ public class EliminacionVehiculo extends javax.swing.JFrame {
     }//GEN-LAST:event_mpActionPerformed
 
     private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
-        MenuEliminacion  menue = new MenuEliminacion();
+        MenuEditar  menue = new MenuEditar();
         menue.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_regresarActionPerformed
 
-    
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
         
-        MostrarDatosVehiculo mdv = new MostrarDatosVehiculo();
-        BuscarTodoVehiculo btv = new BuscarTodoVehiculo();
+        MostrarDatosEquipo mp = new MostrarDatosEquipo();
+        BuscarTodoEquipo bp = new BuscarTodoEquipo();
         
         int opc = metodoBusqueda.getSelectedIndex();
         
         try {
-            mdv.mostrar(btv.buscar(), vehiculo);
+            mp.mostrar(bp.buscar(), equipo);
         } catch (Exception ex) {
-            Logger.getLogger(EliminacionVehiculo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EditarEquipo.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
     }//GEN-LAST:event_mostrarActionPerformed
 
-    private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
-
-    int opc = vehiculo.getSelectedRow();
-    
-    if(opc!=-1 && vehiculo.getValueAt(opc, 0)!=null){
-        EliminarRegistroVehiculo erv = new EliminarRegistroVehiculo();
-        String id = vehiculo.getValueAt(opc, 0).toString();
-        String [] btn  ={"Cancelar","Confirmar"};
-        int sele = JOptionPane.showOptionDialog(this, "¿Deseas eliminar a este vehiculo?", "Confirmacion", 0, 0, null, btn, this);
-        if(sele==JOptionPane.NO_OPTION){
-            try {
-                erv.eliminar(id);
-                DefaultTableModel modelo =(DefaultTableModel) vehiculo.getModel();
-                modelo.setRowCount(0); 
-                JOptionPane.showMessageDialog(null,"Se ha eliminado correctamente");
-            }catch (Exception ex) {
-                Logger.getLogger(EliminacionVehiculo.class.getName()).log(Level.SEVERE, null, ex);
+    private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
+        ActualizarRegistroEquipo arp = new ActualizarRegistroEquipo();
+        
+        int opc = equipo.getSelectedRow();
+        
+        if(opc!=-1 && equipo.getValueAt(opc, 0)!=null){
+            String[] datosPiloto ={
+            equipo.getValueAt(opc, 0).toString(),
+            equipo.getValueAt(opc, 1).toString(),
+            equipo.getValueAt(opc, 2).toString(),
+            equipo.getValueAt(opc, 3).toString(),
+            equipo.getValueAt(opc, 4).toString()};
+            
+            try { 
+                arp.actualizar(datosPiloto);
+                JOptionPane.showMessageDialog(null,"Datos actualizados correctamente");
+            } catch (IOException ex) {
+                JOptionPane.showMessageDialog(null,"Error en la actualizacion");
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null,"Necesita ingresar datos que sean válidos");
             }
-        }
-
-    }else{
-        JOptionPane.showMessageDialog(null,"Seleccione un dato");
-    }
-
-    }//GEN-LAST:event_eliminarActionPerformed
+        }else{
+            JOptionPane.showMessageDialog(null,"Seleccione un dato");
+        }     
+    }//GEN-LAST:event_actualizarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton eliminar;
+    private javax.swing.JButton actualizar;
+    private javax.swing.JTable equipo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -232,6 +231,5 @@ public class EliminacionVehiculo extends javax.swing.JFrame {
     private javax.swing.JButton mp;
     private javax.swing.JTextField parametro;
     private javax.swing.JButton regresar;
-    private javax.swing.JTable vehiculo;
     // End of variables declaration//GEN-END:variables
 }

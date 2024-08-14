@@ -62,6 +62,11 @@ public class Menu extends javax.swing.JFrame {
         });
 
         editar.setText("Editar");
+        editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -163,6 +168,12 @@ public class Menu extends javax.swing.JFrame {
         menue.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_eliminarActionPerformed
+
+    private void editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarActionPerformed
+        MenuEditar me = new MenuEditar();
+        me.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_editarActionPerformed
 
     
     
