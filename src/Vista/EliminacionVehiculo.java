@@ -182,16 +182,8 @@ public class EliminacionVehiculo extends javax.swing.JFrame {
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
         
         MostrarDatosVehiculo mdv = new MostrarDatosVehiculo();
-        BuscarVehiculo btv = new BuscarVehiculo();
         
-        int opc = metodoBusqueda.getSelectedIndex();
-        
-        try {
-            mdv.mostrar(btv.buscar(), vehiculo);
-        } catch (Exception ex) {
-            Logger.getLogger(EliminacionVehiculo.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+        mdv.mostrar(vehiculo, metodoBusqueda.getSelectedIndex(), parametro.getText());
         
     }//GEN-LAST:event_mostrarActionPerformed
 

@@ -1,18 +1,22 @@
-
 package Controlador;
 
-import java.util.List;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
+import java.util.HashMap;
+import java.util.Map;
 
-public class MostrarDatosPiloto {
-    public void mostrar(List<String[]> lista,JTable piloto){
-        
-        DefaultTableModel modelo =(DefaultTableModel) piloto.getModel();
-        modelo.setRowCount(0);
-        
-        for(int i=0;i<lista.size();i++){
-            modelo.addRow(lista.get(i));
-        }
+public class MostrarDatosPiloto extends MostrarDatosBase<BuscarPiloto> {
+
+    @Override
+    protected BuscarPiloto crearBuscador() {
+        return new BuscarPiloto();
+    }
+
+    @Override
+    protected Map<Integer, String> getOpcMap() {
+        Map<Integer, String> opcMap = new HashMap<>();
+        opcMap.put(1, "idPiloto");
+        opcMap.put(2, "nombre");
+        opcMap.put(3, "apellido");
+        opcMap.put(4, "nacionalidad");
+        return opcMap;
     }
 }

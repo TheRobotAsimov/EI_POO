@@ -88,7 +88,7 @@ public class EditarPiloto extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(piloto);
 
-        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Mostrar todos", " " }));
+        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mostrar todos", "ID", "Nombre", "Apellido", "Nacionalidad" }));
 
         jLabel1.setText("Método de búsqueda:");
 
@@ -176,17 +176,9 @@ public class EditarPiloto extends javax.swing.JFrame {
 
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
         
-        MostrarDatosPiloto mp = new MostrarDatosPiloto();
-        BuscarPiloto bp = new BuscarPiloto();
+        MostrarDatosPiloto mdp = new MostrarDatosPiloto();
         
-        int opc = metodoBusqueda.getSelectedIndex();
-        
-        try {
-            mp.mostrar(bp.buscar(), piloto);
-        } catch (Exception ex) {
-            Logger.getLogger(EditarPiloto.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+        mdp.mostrar(piloto, metodoBusqueda.getSelectedIndex(), parametro.getText());
         
     }//GEN-LAST:event_mostrarActionPerformed
 
