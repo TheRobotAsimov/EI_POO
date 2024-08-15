@@ -4,7 +4,7 @@
  */
 package Vista;
 
-import Controlador.BuscarTodoPiloto;
+import Controlador.BuscarPiloto;
 import Controlador.MostrarDatosPiloto;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -88,6 +88,11 @@ public class BusquedaPiloto extends javax.swing.JFrame {
         jScrollPane1.setViewportView(piloto);
 
         metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Mostrar todos", " " }));
+        metodoBusqueda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                metodoBusquedaActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Método de búsqueda:");
 
@@ -166,7 +171,7 @@ public class BusquedaPiloto extends javax.swing.JFrame {
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
         
         MostrarDatosPiloto mp = new MostrarDatosPiloto();
-        BuscarTodoPiloto bp = new BuscarTodoPiloto();
+        BuscarPiloto bp = new BuscarPiloto();
         
         int opc = metodoBusqueda.getSelectedIndex();
         
@@ -178,6 +183,10 @@ public class BusquedaPiloto extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_mostrarActionPerformed
+
+    private void metodoBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_metodoBusquedaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_metodoBusquedaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

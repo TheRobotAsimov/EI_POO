@@ -2,7 +2,7 @@
 package Vista;
 
 import Controlador.ActualizarRegistroPiloto;
-import Controlador.BuscarTodoPiloto;
+import Controlador.BuscarPiloto;
 import Controlador.MostrarDatosPiloto;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -177,7 +177,7 @@ public class EditarPiloto extends javax.swing.JFrame {
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
         
         MostrarDatosPiloto mp = new MostrarDatosPiloto();
-        BuscarTodoPiloto bp = new BuscarTodoPiloto();
+        BuscarPiloto bp = new BuscarPiloto();
         
         int opc = metodoBusqueda.getSelectedIndex();
         

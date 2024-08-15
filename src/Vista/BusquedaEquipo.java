@@ -1,12 +1,13 @@
 
 package Vista;
 
-import Controlador.BuscarTodoEquipo;
-import Controlador.BuscarTodoPiloto;
+import Controlador.BuscarEquipo;
+import Controlador.BuscarPiloto;
 import Controlador.MostrarDatosEquipo;
 import Controlador.MostrarDatosPiloto;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -86,7 +87,12 @@ public class BusquedaEquipo extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(equipo);
 
-        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Mostrar todos", " " }));
+        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mostrar todos", "ID", "Marca", "Director", "Nacionalidad" }));
+        metodoBusqueda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                metodoBusquedaActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Método de búsqueda:");
 
@@ -163,20 +169,17 @@ public class BusquedaEquipo extends javax.swing.JFrame {
     }//GEN-LAST:event_regresarActionPerformed
 
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
+        // falta validar que ingrese un numero
+
+        MostrarDatosEquipo mde = new MostrarDatosEquipo();
         
-        MostrarDatosEquipo mp = new MostrarDatosEquipo();
-        BuscarTodoEquipo bp = new BuscarTodoEquipo();
-        
-        int opc = metodoBusqueda.getSelectedIndex();
-        
-        try {
-            mp.mostrar(bp.buscar(), equipo);
-        } catch (Exception ex) {
-            Logger.getLogger(BusquedaEquipo.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
+        mde.mostrar(equipo, metodoBusqueda.getSelectedIndex(), parametro.getText());
+               
     }//GEN-LAST:event_mostrarActionPerformed
+
+    private void metodoBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_metodoBusquedaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_metodoBusquedaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -56,16 +56,22 @@ public class RegistroVehiculo extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(204, 0, 51));
         jLabel1.setFont(new java.awt.Font("Vineta BT", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(250, 250, 250));
         jLabel1.setText("Modelo");
 
+        jLabel2.setForeground(new java.awt.Color(250, 250, 250));
         jLabel2.setText("Número");
 
+        jLabel3.setForeground(new java.awt.Color(250, 250, 250));
         jLabel3.setText("Color");
 
+        jLabel4.setForeground(new java.awt.Color(250, 250, 250));
         jLabel4.setText("Velocidad Maxima");
 
+        jLabel5.setForeground(new java.awt.Color(250, 250, 250));
         jLabel5.setText("ID equipo");
 
+        jLabel6.setForeground(new java.awt.Color(250, 250, 250));
         jLabel6.setText("ID piloto");
 
         regresar.setText("Regresar");

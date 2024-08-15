@@ -1,7 +1,7 @@
 
 package Vista;
 
-import Controlador.BuscarTodoPiloto;
+import Controlador.BuscarPiloto;
 import Controlador.EliminarRegistroPiloto;
 import Controlador.MostrarDatosPiloto;
 import java.util.logging.Level;
@@ -177,7 +177,7 @@ public class EliminacionPiloto extends javax.swing.JFrame {
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
         
         MostrarDatosPiloto mp = new MostrarDatosPiloto();
-        BuscarTodoPiloto bp = new BuscarTodoPiloto();
+        BuscarPiloto bp = new BuscarPiloto();
         
         int opc = metodoBusqueda.getSelectedIndex();
         

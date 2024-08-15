@@ -1,9 +1,9 @@
 
 package Vista;
 
-import Controlador.BuscarTodoEquipo;
-import Controlador.BuscarTodoPiloto;
-import Controlador.BuscarTodoVehiculo;
+import Controlador.BuscarEquipo;
+import Controlador.BuscarPiloto;
+import Controlador.BuscarVehiculo;
 import Controlador.MostrarDatosEquipo;
 import Controlador.MostrarDatosPiloto;
 import Controlador.MostrarDatosVehiculo;
@@ -167,7 +167,7 @@ public class BusquedaVehiculo extends javax.swing.JFrame {
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
         
         MostrarDatosVehiculo mdv = new MostrarDatosVehiculo();
-        BuscarTodoVehiculo btv = new BuscarTodoVehiculo();
+        BuscarVehiculo btv = new BuscarVehiculo();
         
         int opc = metodoBusqueda.getSelectedIndex();
         

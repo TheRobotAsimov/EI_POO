@@ -1,7 +1,7 @@
 
 package Vista;
 
-import Controlador.BuscarTodoEquipo;
+import Controlador.BuscarEquipo;
 import Controlador.EliminarRegistroEquipo;
 import Controlador.EliminarRegistroPiloto;
 import Controlador.MostrarDatosEquipo;
@@ -89,7 +89,7 @@ public class EliminacionEquipo extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(equipo);
 
-        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Mostrar todos", " " }));
+        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mostrar todos", "ID", "" }));
 
         jLabel1.setText("Método de búsqueda:");
 
@@ -176,19 +176,9 @@ public class EliminacionEquipo extends javax.swing.JFrame {
     }//GEN-LAST:event_regresarActionPerformed
 
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
+        MostrarDatosEquipo mde = new MostrarDatosEquipo();
         
-        MostrarDatosEquipo mp = new MostrarDatosEquipo();
-        BuscarTodoEquipo bp = new BuscarTodoEquipo();
-        
-        int opc = metodoBusqueda.getSelectedIndex();
-        
-        try {
-            mp.mostrar(bp.buscar(), equipo);
-        } catch (Exception ex) {
-            Logger.getLogger(EliminacionEquipo.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
+        mde.mostrar(equipo, metodoBusqueda.getSelectedIndex(), parametro.getText());
     }//GEN-LAST:event_mostrarActionPerformed
 
     private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
