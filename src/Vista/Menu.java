@@ -42,7 +42,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(119, 24, 30));
 
         buscar.setBackground(new java.awt.Color(198, 214, 214));
-        buscar.setText("Búscar");
+        buscar.setText("Buscar");
         buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buscarActionPerformed(evt);

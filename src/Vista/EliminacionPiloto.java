@@ -1,7 +1,7 @@
 
 package Vista;
 
-import Controlador.BuscarTodoPiloto;
+import Controlador.BuscarPiloto;
 import Controlador.EliminarRegistroPiloto;
 import Controlador.MostrarDatosPiloto;
 import java.util.logging.Level;
@@ -88,7 +88,7 @@ public class EliminacionPiloto extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(piloto);
 
-        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Mostrar todos", " " }));
+        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mostrar todos", "ID", "Nombre", "Apellido", "Nacionalidad" }));
 
         jLabel1.setText("Método de búsqueda:");
 
@@ -176,18 +176,10 @@ public class EliminacionPiloto extends javax.swing.JFrame {
 
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
         
-        MostrarDatosPiloto mp = new MostrarDatosPiloto();
-        BuscarTodoPiloto bp = new BuscarTodoPiloto();
+        MostrarDatosPiloto mdp = new MostrarDatosPiloto();
         
-        int opc = metodoBusqueda.getSelectedIndex();
-        
-        try {
-            mp.mostrar(bp.buscar(), piloto);
-        } catch (Exception ex) {
-            Logger.getLogger(EliminacionPiloto.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
+        mdp.mostrar(piloto, metodoBusqueda.getSelectedIndex(), parametro.getText());
+       
     }//GEN-LAST:event_mostrarActionPerformed
 
     private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
