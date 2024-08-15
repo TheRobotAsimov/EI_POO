@@ -3,7 +3,10 @@ package Vista;
 
 import Controlador.InsertarRegistroEquipo;
 import Controlador.InsertarRegistroPiloto;
+import Controlador.ValidacionEquipo;
 import Controlador.ValidacionRegistroPiloto;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -169,6 +172,7 @@ public class RegistroEquipo extends javax.swing.JFrame {
     private void enviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarActionPerformed
         
         InsertarRegistroEquipo ire = new InsertarRegistroEquipo();
+        ValidacionEquipo val =new ValidacionEquipo();
         
         //Recolectando los valores
         String marc = marca.getText();
@@ -177,10 +181,11 @@ public class RegistroEquipo extends javax.swing.JFrame {
         
         //Validación datos e inserción de datos
         try{
+            val.validarEqu(marc, dire, naci);
             ire.insertar(marc, dire, naci);
             JOptionPane.showMessageDialog(null,"Datos ingresados correctamente");
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null,"Datos incorrectos. Vuelva a introducir los datos");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null,"Datos ingresados incorrectamente "+ ex.toString());
         }
         
     }//GEN-LAST:event_enviarActionPerformed

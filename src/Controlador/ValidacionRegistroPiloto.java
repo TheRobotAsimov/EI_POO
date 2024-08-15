@@ -7,7 +7,7 @@ public class ValidacionRegistroPiloto {
         //Validando que los campos no esten vacios
         if(nombre.isEmpty() || apellido.isEmpty() || nacionalidad.isEmpty() || peso.isEmpty() || anio.isEmpty()
             || mes.isEmpty() || dia.isEmpty() || altura.isEmpty()){
-            throw new Exception(); 
+            throw new NullPointerException (); 
         }
         
         //Validando que los textos no tengan caracteres especiales
