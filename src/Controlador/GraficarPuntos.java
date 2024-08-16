@@ -18,7 +18,7 @@ public class GraficarPuntos {
     public void graficar (JPanel panelGrafica){
         
         JFreeChart grafico_valores = ChartFactory.createBarChart3D(
-            "Salario de Pilotos",    // Nombre del grafico
+            "Puntos de pilotos",    // Nombre del grafico
             "Piloto", // Nombre de las barras (eje x)
             "Cantidad",           // Nombre de los valores (eje y)
             datos(),    // Datos del grafico

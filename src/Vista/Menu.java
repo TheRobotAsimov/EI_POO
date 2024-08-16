@@ -40,9 +40,8 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(119, 24, 30));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        buscar.setBackground(new java.awt.Color(198, 214, 214));
         buscar.setText("Buscar");
         buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,7 +49,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        registrar.setBackground(new java.awt.Color(198, 214, 214));
         registrar.setText("Registrar");
         registrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,7 +56,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        eliminar.setBackground(new java.awt.Color(198, 214, 214));
         eliminar.setText("Eliminar");
         eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,7 +63,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        editar.setBackground(new java.awt.Color(198, 214, 214));
         editar.setText("Editar");
         editar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,7 +70,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        graficar.setBackground(new java.awt.Color(198, 214, 214));
         graficar.setText("Graficar");
         graficar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
