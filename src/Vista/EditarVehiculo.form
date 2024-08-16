@@ -199,10 +199,12 @@
         <Component class="javax.swing.JComboBox" name="metodoBusqueda">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="ID"/>
-                <StringItem index="1" value="Mostrar todos"/>
-                <StringItem index="2" value=" "/>
+              <StringArray count="5">
+                <StringItem index="0" value="Mostrar todos"/>
+                <StringItem index="1" value="ID"/>
+                <StringItem index="2" value="Modelo"/>
+                <StringItem index="3" value="Numero"/>
+                <StringItem index="4" value="Color"/>
               </StringArray>
             </Property>
           </Properties>
