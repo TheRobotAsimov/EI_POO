@@ -31,6 +31,12 @@ public abstract class MostrarDatosBase<T extends BuscarBase> {
     }
 
     public void actualizarTabla(List<String[]> lista, JTable table) {
+        
+        if(lista.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No se encontraron coincidencias. Revisar dato ingresado");
+            return;
+        }
+        
         DefaultTableModel modelo = (DefaultTableModel) table.getModel();
         modelo.setRowCount(0);
 

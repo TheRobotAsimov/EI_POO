@@ -5,6 +5,8 @@
         <group>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/EditarPiloto.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/BusquedaVehiculo.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/GraficarPuntos.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/GraficarNacionalidadEquipo.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/MostrarDatosBase.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/nbproject/build-impl.xml</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/BuscarPiloto.java</file>
@@ -15,18 +17,31 @@
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/ActualizarRegistroPiloto.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/EditarEquipo.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/EliminacionVehiculo.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/GraficaNacionalidadEquipo.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/GraficarEdad.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/MenuGraficar.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/GraficaEdad.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/manifest.mf</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/BuscarBase.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/GraficaPuntos.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/GraficaNumNeumaticos.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/MostrarDatosVehiculo.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/EliminacionPiloto.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/BusquedaPiloto.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/EditarVehiculo.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/MenuEliminacion.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/GraficarNumNeumaticos.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/EliminacionEquipo.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/ActualizarRegistroEquipo.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/MenuEditar.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/GraficarSalario.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/nbproject/project.properties</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/MostrarDatosPiloto.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/build.xml</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/Menu.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/MenuBusqueda.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/InsertarRegistroVehiculo.java</file>
+            <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/GraficaSalario.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Controlador/MostrarDatosEquipo.java</file>
             <file>file:/D:/Users/thero/Documentos/EI_POO/src/Vista/BusquedaEquipo.java</file>
         </group>
