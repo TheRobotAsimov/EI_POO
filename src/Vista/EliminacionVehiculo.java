@@ -93,7 +93,7 @@ public class EliminacionVehiculo extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(vehiculo);
 
-        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Mostrar todos", " " }));
+        metodoBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mostrar todos", "ID", "Modelo", "Numero", "Color" }));
 
         jLabel1.setText("Método de búsqueda:");
 

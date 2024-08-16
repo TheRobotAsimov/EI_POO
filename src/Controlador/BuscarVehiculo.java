@@ -7,7 +7,7 @@ public class BuscarVehiculo extends BuscarBase {
 
     @Override
     protected String getBaseQuery() {
-        return "select * from piloto";
+        return "select * from vehiculo";
     }
 
     @Override
