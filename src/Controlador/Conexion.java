@@ -14,7 +14,7 @@ public class Conexion {
     public Statement comando = null;
     public ResultSet registro;
     
-    public Connection JavaToMySQL() throws Exception{
+    public Connection JavaToMySQL(){
         try {
             // Instanciar librería del conector
             Class.forName("com.mysql.cj.jdbc.Driver");

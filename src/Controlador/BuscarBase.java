@@ -23,6 +23,9 @@ public abstract class BuscarBase {
     // Método común para realizar la búsqueda con condiciones
     public List<String[]> buscar(String campo, String valor) throws SQLException, Exception {
         // Validar si el valor es un número
+        if(campo.contains("id") && !esEntero(valor)){
+            throw new Exception("Ingresar un número entero");
+        } else
         if (!esNumero(valor)) {
             valor = "\"" + valor + "\""; // Agregar comillas si no es un número
         }
@@ -35,6 +38,15 @@ public abstract class BuscarBase {
     private boolean esNumero(String valor) {
         try {
             Double.valueOf(valor);
+            return true; // Si se puede convertir a número, retornar true
+        } catch (NumberFormatException e) {
+            return false; // Si lanza una excepción, no es un número
+        }
+    }
+    
+    private boolean esEntero(String valor) {
+        try {
+            Integer.valueOf(valor);
             return true; // Si se puede convertir a número, retornar true
         } catch (NumberFormatException e) {
             return false; // Si lanza una excepción, no es un número
