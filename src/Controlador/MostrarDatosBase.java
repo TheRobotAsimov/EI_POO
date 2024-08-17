@@ -44,4 +44,5 @@ public abstract class MostrarDatosBase<T extends BuscarBase> {
             modelo.addRow(fila);
         }
     }
+    
 }

@@ -39,6 +39,8 @@ public class GraficaNumNeumaticos extends javax.swing.JFrame {
             .addGap(0, 261, Short.MAX_VALUE)
         );
 
+        jButton6.setBackground(new java.awt.Color(153, 153, 153));
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Regresar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
